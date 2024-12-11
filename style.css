@@ -1,0 +1,105 @@
+/* Updated style.css file with rotating laser heart effect */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #001a33, #00264d, #003366, #004080); /* Gradient night sky */
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite; /* Smooth gradient transition */
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.heart-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-origin: center;
+  animation: rotateHeart 4s infinite alternate ease-in-out;
+}
+
+@keyframes rotateHeart {
+  0% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+.heart-container .laser {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.8), rgba(255, 255, 0, 0.5));
+  transform-origin: bottom center;
+  animation: pulseLaser 1.5s infinite alternate;
+}
+
+@keyframes pulseLaser {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scaleY(1.5);
+  }
+}
+
+/* Laser heart positions */
+.heart-container .laser:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.heart-container .laser:nth-child(2) {
+  transform: rotate(20deg);
+}
+
+.heart-container .laser:nth-child(3) {
+  transform: rotate(40deg);
+}
+
+.heart-container .laser:nth-child(4) {
+  transform: rotate(60deg);
+}
+
+.heart-container .laser:nth-child(5) {
+  transform: rotate(80deg);
+}
+
+.heart-container .laser:nth-child(6) {
+  transform: rotate(100deg);
+}
+
+.heart-container .laser:nth-child(7) {
+  transform: rotate(120deg);
+}
+
+.heart-container .laser:nth-child(8) {
+  transform: rotate(140deg);
+}
+
+.heart-container .laser:nth-child(9) {
+  transform: rotate(160deg);
+}
+
+.heart-container .laser:nth-child(10) {
+  transform: rotate(180deg);
+}
